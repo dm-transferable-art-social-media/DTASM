@@ -6,15 +6,19 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "test": "jest"
   },
   "dependencies": {
     "@expo/webpack-config": "^19.0.0",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/native": "^6.1.8",
     "@react-navigation/native-stack": "^6.9.14",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/react-native": "^12.3.0",
     "expo": "~49.0.13",
     "expo-status-bar": "~1.6.0",
+    "jest": "^29.7.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.72.5",
@@ -23,10 +27,14 @@
     "react-native-safe-area-context": "4.6.3",
     "react-native-screens": "~3.22.0",
     "react-native-web": "~0.19.6",
-    "react-navigation": "^5.0.0"
+    "react-navigation": "^5.0.0",
+    "react-test-renderer": "^18.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-flow": "^7.22.15",
+    "@babel/preset-react": "^7.22.15"
   },
   "private": true
 }
