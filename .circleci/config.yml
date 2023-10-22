@@ -1,0 +1,17 @@
+version: 2.1
+orbs:
+
+jobs:
+  build-and-test:
+    docker:
+      - image:
+    steps:
+      - checkout
+      - run:
+          command: |
+      - store_test_results:
+          path: test-results
+workflows:
+  testing_repos:
+    jobs:
+      - build-and-test
