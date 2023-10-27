@@ -10,7 +10,7 @@ jobs:
           key: dependency-cache-
       - run:
           name: Install Dependencies
-          command: npm ci
+          command: npm install
       - run:
           name: Run tests
           command: npm run test
