@@ -9,15 +9,6 @@ jobs:
       - restore_cache:
           key: dependency-cache-
       - run:
-        name: Print Working Directory
-        command: pwd
-      - run:
-        name: List Contents
-        command: ls -la
-      - run:
-          name: Change Working Directory
-          command: cd art-social-app
-      - run:
           name: Install Dependencies
           command: npm install
       - run:
