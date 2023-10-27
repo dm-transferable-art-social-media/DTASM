@@ -1,11 +1,14 @@
 version: 2.1
 jobs:
   build:
-    working_directory: ~/repo/art-social-app
+    working_directory: ~/repo
     docker:
       - image: cimg/node:18.10.0
     steps:
       - checkout
+      - run:
+          name: Print Working Directory
+          command: ls -R
       - restore_cache:
           key: dependency-cache-
       - run:
