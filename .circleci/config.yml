@@ -12,8 +12,5 @@ jobs:
           name: Install Dependencies
           command: npm install
       - run:
-          name: Change Working Directory
-          command: cd art-social-app
-      - run:
           name: Run tests
           command: npm run test
