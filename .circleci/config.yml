@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  build:
+  build and test:
     working_directory: ~/repo/art-social-app
     docker:
       - image: cimg/node:18.10.0
