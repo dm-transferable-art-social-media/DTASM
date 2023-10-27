@@ -9,6 +9,9 @@ jobs:
       - restore_cache:
           key: dependency-cache-
       - run:
+          name: Change Working Directory
+          command: cd art-social-app
+      - run:
           name: Install Dependencies
           command: npm install
       - run:
