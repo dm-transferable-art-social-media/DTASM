@@ -1,7 +1,7 @@
 version: 2.1
 jobs:
   build:
-    working_directory: ~/repo
+    working_directory: ~/repo/art-social-app
     docker:
       - image: cimg/node:18.10.0
     steps:
@@ -11,9 +11,8 @@ jobs:
       - run:
           name: Install Dependencies
           command: npm install
-      - run:
-          name: Change Directory
-          command: cd art-social-app/__tests__
+  test:
+    working_directory: ~/repo/art-social-app/__tests__
       - run:
           name: Run tests
           command: npm run test
