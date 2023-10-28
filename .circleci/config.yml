@@ -23,15 +23,12 @@ jobs:
           command: npm run test
   deploy:
     docker:
-      - image: docker:latest
+      - image: cimg/node:18.10.0
     steps:
-      - run:
-          name: Set Version Tag
-          command: export VERSION_TAG=$(git rev-parse --short HEAD)
       - run:
           name: Build and Tag Docker Image
           command: |
-            docker build -t art-social-app:$VERSION_TAG .
+            docker build -t art-social-app:$CIRCLE_SHA1 .
 
 workflows:
   version: 2
