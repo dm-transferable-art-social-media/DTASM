@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  build:
+  build-test:
     working_directory: ~/repo/art-social-app
     docker:
       - image: cimg/node:18.10.0
@@ -16,21 +16,9 @@ jobs:
           key: dependency-cache-
           paths:
             - node_modules
-
-  test:
-    docker:
-      - image: cimg/node:18.10.0
-    steps:
-      - run:
-          name: Change directory
-          command: cd ~/repo/art-social-app
-      - run:
-          name: Install Dependencies
-          command: npm install
       - run:
           name: Run Tests
           command: npm run test
-
   deploy:
     docker:
       - image: docker:latest
@@ -47,10 +35,7 @@ workflows:
   version: 2
   build-test-deploy:
     jobs:
-      - build
-      - test:
-          requires:
-            - build
+      - build-test
       - deploy:
           requires:
-            - test
+            - build-test
