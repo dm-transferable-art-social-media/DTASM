@@ -7,6 +7,8 @@ jobs:
       - image: cimg/node:18.10.0
     steps:
       - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
       - restore_cache:
           key: dependency-cache-
       - run:
@@ -29,7 +31,7 @@ jobs:
       - run:
           name: Build and Tag Docker Image
           command: |
-            docker build -t my-app:$VERSION_TAG .
+            docker build -t art-social-app:$VERSION_TAG .
 
 workflows:
   version: 2
