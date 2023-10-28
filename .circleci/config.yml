@@ -26,8 +26,8 @@ jobs:
       - image: docker:latest
     steps:
       - run:
-          name: Set Version Tag
-          command: echo "VERSION_TAG=$(git rev-parse --short HEAD)" >> $BASH_ENV
+        name: Set Version Tag
+        command: export VERSION_TAG=$(git rev-parse --short HEAD)
       - run:
           name: Build and Tag Docker Image
           command: |
