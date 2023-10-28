@@ -22,6 +22,12 @@ jobs:
       - image: cimg/node:18.10.0
     steps:
       - run:
+          name: Change directory
+          command: cd ~/repo/art-social-app
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - run:
           name: Run Tests
           command: npm run test
 
