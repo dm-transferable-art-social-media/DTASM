@@ -29,9 +29,8 @@ jobs:
           name: Check Docker Version
           command: docker --version
       - run:
-          name: Build and Tag Docker Image
-          command: |
-            docker build -t art-social-app:$CIRCLE_SHA1 -f /art-social-app/Dockerfile.
+          name: Build Docker Image
+          command: docker build -t art-social-app:$CIRCLE_SHA1 -f /art-social-app/Dockerfile .
 
 workflows:
   version: 2
