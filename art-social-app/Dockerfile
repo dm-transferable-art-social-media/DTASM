@@ -2,7 +2,7 @@
 FROM cimg/node:18.10.0
 
 # Set the working directory in the container
-WORKDIR /art-social-app/app
+WORKDIR /art-social-app
 
 # Copy package.json and package-lock.json to the container
 COPY package*.json ./
