@@ -2,7 +2,7 @@ version: 2.1
 
 jobs:
   build-test:
-    working_directory: ~/art-social-app
+    working_directory: ~/repo/DTASM/art-social-app
     docker:
       - image: cimg/node:18.10.0
     steps:
