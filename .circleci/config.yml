@@ -30,7 +30,7 @@ jobs:
           command: docker --version
       - run:
           name: Build Docker Image
-          command: docker build -t art-social-app:$CIRCLE_SHA1 -f /DTASM/art-social-app/Dockerfile .
+          command: docker build -t art-social-app:$CIRCLE_SHA1 -f ./Dockerfile .
 
 workflows:
   version: 2
